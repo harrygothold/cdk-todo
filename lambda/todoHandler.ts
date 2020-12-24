@@ -81,7 +81,7 @@ exports.handler = async function (event: AWSLambda.APIGatewayEvent) {
                 ? createResponse(`${todo} added to the database`)
                 : createResponse("Todo is missing", 500);
         }
-        // if DELETE, delete todo (we'll imlement that in the next lesson)
+        // if DELETE, delete todo
         if (httpMethod === "DELETE") {
             const id = await deleteTodoItem(data);
             return id
